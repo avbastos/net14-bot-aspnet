@@ -12,5 +12,9 @@ namespace SimpleBot.Logic
             return $"{message.User} disse '{message.Text}";
         }
 
+        private void Teste()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
