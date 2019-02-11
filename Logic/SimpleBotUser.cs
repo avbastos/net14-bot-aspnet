@@ -21,10 +21,8 @@ namespace SimpleBot.Logic
 
         public string Reply(SimpleMessage message)
         {
-
-
-            Connection.Open("transcript");
-
+            
+       
             BsonDocument document = new BsonDocument()
             {
                 { "id", message.Id },
@@ -33,14 +31,9 @@ namespace SimpleBot.Logic
             };
 
             Connection.Insert(document);
-            this._rep.Insert(document);
 
             return $"{message.User} disse '{message.Text}";
         }
 
-        private void Teste()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
