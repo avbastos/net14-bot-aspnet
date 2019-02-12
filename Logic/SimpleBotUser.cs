@@ -25,12 +25,14 @@ namespace SimpleBot.Logic
        
             BsonDocument document = new BsonDocument()
             {
-                { "id", message.Id },
+                { "id", Environment.MachineName },
                 { "nome", message.User },
                 { "mensagem", message.Text }
             };
+            Connection.GravarLogAcesso(Environment.MachineName);
 
             Connection.Insert(document);
+
 
             return $"{message.User} disse '{message.Text}";
         }

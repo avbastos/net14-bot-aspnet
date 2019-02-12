@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
 using SimpleBot.Logic;
+using SimpleBot.Persistence;
 
 namespace SimpleBot
 {
@@ -20,6 +21,7 @@ namespace SimpleBot
             if (g_bot == null)
             {
                 g_bot = new SimpleBotUser();
+              
             }
         }
 
